@@ -38,6 +38,8 @@ public class Primes {
      * numbers from the total range and their precentage.
      */
     public static void printsPrimes(Boolean[] isPrime, int N) {
+        System.out.println(String.format("Prime numbers up to %s:", N));
+
         int numPrimes = 0;
         for (int i = 0; i < isPrime.length; i++) {
             if (isPrime[i]) {

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArrCharOps",
+            "request": "launch",
+            "mainClass": "ArrCharOps",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -15,7 +22,9 @@
             "name": "Primes",
             "request": "launch",
             "mainClass": "Primes",
-            "args": [30]
+            "args": [
+                30
+            ]
         }
     ]
 }

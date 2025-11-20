@@ -18,6 +18,7 @@ public class MyString {
 
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
+        // for (int)
         return str.toLowerCase();
     }
 

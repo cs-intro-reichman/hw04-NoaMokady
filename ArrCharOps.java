@@ -74,8 +74,17 @@ public class ArrCharOps {
      * Same as indexOf(char[], char), but starts the search in the given index.
      */
     public static int indexOf(char[] arr, char ch, int fromIndex) {
-        arr = subArray(arr, fromIndex, arr.length);
-        return indexOf(arr, ch);
+        // arr = subArray(arr, fromIndex, arr.length);
+        // return indexOf(arr, ch);
+
+        if (fromIndex < arr.length) {
+            for (int i = fromIndex; i < arr.length; i++) {
+                if (ch == charAt(arr, i)) {
+                    return i;
+                }
+            }
+        }
+        return -1;
     }
 
     /**
@@ -112,7 +121,6 @@ public class ArrCharOps {
      * characters containing the characters "urge".
      */
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
-        // Replace the following statement with your code
         return Arrays.copyOfRange(arr, beginIndex, endIndex);
     }
 

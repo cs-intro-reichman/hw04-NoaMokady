@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TesterArrayCharOps",
+            "request": "launch",
+            "mainClass": "TesterArrayCharOps",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
             "name": "ArrCharOps",
             "request": "launch",
             "mainClass": "ArrCharOps",

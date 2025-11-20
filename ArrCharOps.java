@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * A library of operations on arrays of characters (char values).
@@ -74,9 +72,6 @@ public class ArrCharOps {
      * Same as indexOf(char[], char), but starts the search in the given index.
      */
     public static int indexOf(char[] arr, char ch, int fromIndex) {
-        // arr = subArray(arr, fromIndex, arr.length);
-        // return indexOf(arr, ch);
-
         if (fromIndex < arr.length) {
             for (int i = fromIndex; i < arr.length; i++) {
                 if (ch == charAt(arr, i)) {
@@ -105,7 +100,6 @@ public class ArrCharOps {
      * Returns an array which is the concatanation of the two given arrays.
      */
     public static char[] concat(char[] arr1, char[] arr2) {
-        // Replace the following statement with your code
         char[] concatArr = new char[arr1.length + arr2.length];
         System.arraycopy(arr1, 0, concatArr, 0, arr1.length);
         System.arraycopy(arr2, 0, concatArr, arr1.length, arr2.length);
@@ -126,15 +120,12 @@ public class ArrCharOps {
 
     /**
      * Returns a single integer that represents the given array. This integer is
-     * sometimes
-     * referred to as the array's "hash code". Later in the course we'll explain
-     * what these
-     * hash codes are used for. For now, simply implement the specification given
-     * below.
+     * sometimes referred to as the array's "hash code". Later in the course we'll
+     *  explain what these hash codes are used for. For now, simply implement the 
+     * specification given below.
      * The hash code is computed as: arr[0]*7^(n-1) + arr[1]*7^(n-2) + ... +
-     * arr[n-2]*7 + arr[n-1]
-     * where arr[i] is the i'th character of the array, and n is the array's length.
-     * The hash value of an empty array is zero.
+     * arr[n-2]*7 + arr[n-1] where arr[i] is the i'th character of the array, and n
+     *  is the array's length. The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
         Integer hashInt = 0;

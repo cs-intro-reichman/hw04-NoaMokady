@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "KeywordsDetector",
+            "request": "launch",
+            "mainClass": "KeywordsDetector",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
+            "name": "MyString",
+            "request": "launch",
+            "mainClass": "MyString",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
             "name": "TesterArrayCharOps",
             "request": "launch",
             "mainClass": "TesterArrayCharOps",

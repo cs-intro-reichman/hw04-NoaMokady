@@ -18,13 +18,37 @@ public class MyString {
 
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
-        // Replace the following statement with your code
-        return null;
+        char[] charsArr = str.toCharArray();
+        for (int i = 0; i < charsArr.length; i++) {
+            // Changes uppercase letters to lowercase.
+            if ('A' <= charsArr[i] && charsArr[i] <= 'Z') {
+                charsArr[i] = (char) (charsArr[i] + 32);
+            }
+        }
+        return new String(charsArr);
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-        // Replace the following statement with your code
-        return false;
+        // Returns true if str2 is empty.
+        if (str2.length() == 0) {
+            return true;
+        }
+        // Finds the index in str1 where the first letter in str2 match.
+        int startIndex = str1.indexOf(str2.charAt(0));
+        // Returns false if str1 is empty, str2 is bigger than str1 or the first letter
+        //  of str2 doesn't exit in str1.
+        if (str1.length() == 0 || startIndex == -1 || str1.length() < str2.length()) {
+            return false;
+        }
+
+        // Checks if all of the letters in str2 exists in a chronological order in str1.
+        Boolean isContains = true;
+        for (int i = 1; i < str2.length(); i++) {
+            if (str1.charAt(startIndex + i) != str2.charAt(i)) {
+                isContains = false;
+            }
+        }
+        return isContains;
     }
 }

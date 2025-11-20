@@ -1,0 +1,58 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "TesterMyString",
+            "request": "launch",
+            "mainClass": "TesterMyString",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
+            "name": "KeywordsDetector",
+            "request": "launch",
+            "mainClass": "KeywordsDetector",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
+            "name": "MyString",
+            "request": "launch",
+            "mainClass": "MyString",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
+            "name": "TesterArrayCharOps",
+            "request": "launch",
+            "mainClass": "TesterArrayCharOps",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
+            "name": "ArrCharOps",
+            "request": "launch",
+            "mainClass": "ArrCharOps",
+            "projectName": "hw04-NoaMokady_c446b26b"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Primes",
+            "request": "launch",
+            "mainClass": "Primes",
+            "args": [
+                30
+            ]
+        }
+    ]
+}

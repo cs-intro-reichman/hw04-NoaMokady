@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 /**
  * A library of operations on arrays of characters (char values).
@@ -51,7 +50,19 @@ public class ArrCharOps {
      * returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
-        return Arrays.equals(arr1, arr2);
+        // If the arrays' length are different, returns false.
+        if (arr1.length != arr2.length) {
+            return false;
+        }
+
+        // Checks if the two arrays have the same value in every index.
+        Boolean isEquals = true;
+        for (int i = 0; i < arr1.length; i++) {
+            if (charAt(arr1, i) != charAt(arr2, i)) {
+                isEquals = false;
+            }
+        }
+        return isEquals;
     }
 
     /**
@@ -101,8 +112,14 @@ public class ArrCharOps {
      */
     public static char[] concat(char[] arr1, char[] arr2) {
         char[] concatArr = new char[arr1.length + arr2.length];
-        System.arraycopy(arr1, 0, concatArr, 0, arr1.length);
-        System.arraycopy(arr2, 0, concatArr, arr1.length, arr2.length);
+        // Adds the characters from the first array.
+        for (int i = 0; i < arr1.length; i++) {
+            concatArr[i] = arr1[i];
+        }
+        // Adds the characters from the second array.
+        for (int i = 0; i < arr2.length; i++) {
+            concatArr[i + arr1.length] = arr2[i];
+        }
         return concatArr;
     }
 
@@ -111,21 +128,24 @@ public class ArrCharOps {
      * The sub-array begins at the specified beginIndex and extends to the character
      * at index endIndex - 1.
      * For example, if arr contains the characters "hamburger", then subArray(4, 8)
-     * returns an array of
-     * characters containing the characters "urge".
+     * returns an array of characters containing the characters "urge".
      */
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
-        return Arrays.copyOfRange(arr, beginIndex, endIndex);
+        char[] subArr = new char[endIndex - beginIndex];
+        for (int i = 0; i < subArr.length; i++) {
+            subArr[i] = arr[i + beginIndex];
+        }
+        return subArr;
     }
 
     /**
      * Returns a single integer that represents the given array. This integer is
      * sometimes referred to as the array's "hash code". Later in the course we'll
-     *  explain what these hash codes are used for. For now, simply implement the 
+     * explain what these hash codes are used for. For now, simply implement the
      * specification given below.
      * The hash code is computed as: arr[0]*7^(n-1) + arr[1]*7^(n-2) + ... +
      * arr[n-2]*7 + arr[n-1] where arr[i] is the i'th character of the array, and n
-     *  is the array's length. The hash value of an empty array is zero.
+     * is the array's length. The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
         Integer hashInt = 0;

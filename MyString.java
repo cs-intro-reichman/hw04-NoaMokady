@@ -30,12 +30,15 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
+        // Returns true if str2 is empty.
+        if (str2.length() == 0) {
+            return true;
+        }
         // Finds the index in str1 where the first letter in str2 match.
         int startIndex = str1.indexOf(str2.charAt(0));
-        // Returns false if one of the strings is empty, str2 is bigger than str1 or the
-        // first letter of str2 doesn't exit in str1.
-        Boolean isStrEmpty = str1.length() == 0 || str2.length() == 0;
-        if (isStrEmpty || startIndex == -1 || str1.length() < str2.length()) {
+        // Returns false if str1 is empty, str2 is bigger than str1 or the first letter
+        //  of str2 doesn't exit in str1.
+        if (str1.length() == 0 || startIndex == -1 || str1.length() < str2.length()) {
             return false;
         }
 
